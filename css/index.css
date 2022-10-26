@@ -1,0 +1,271 @@
+.main {
+    width: 980px;
+    height: 455px;
+    /* background-color: pink; */
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+.focus {
+    width: 721px;
+    height: 455px;
+    background-color: purple;
+}
+
+.newsflash {
+    width: 250px;
+    height: 455px;
+    /* background-color: skyblue; */
+}
+
+.focus ul li {
+    position: relative;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    /* 如果既设定了right=0，也设定了left=0，系统默认执行先左后右，先上后下 */
+    margin-top: -15px;
+    width: 20px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.prev {
+    /* 绝对定位的盒子可以直接设置宽度和高度 */   
+    left: 0;
+    top: 50%;
+    margin-top: -15px;
+    width: 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.prev::before {
+    content: "\e91f";
+    font-family: 'icomoon';
+}
+.next {
+    right: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.next::before {
+    content: "\e920";
+    font-family: 'icomoon';
+}
+.promo-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -35px;
+    width: 70px;
+    height: 13px;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 7px;
+}
+.promo-nav li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 3px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.news {
+    height: 165px;
+    /* background-color: pink; */
+    border: 1px #ccc solid;
+}
+.news-hd {
+    line-height: 33px;
+    height: 33px;
+    border-bottom: 1px #e4e4e4 dotted;
+    padding: 0 15px;
+}
+.news-hd h5 {
+    font-size: 14px;
+}
+.news-hd a::after {
+    content: "\e920";
+    font-family: 'icomoon';
+}
+.news-bd ul {
+    padding: 5px 15px 0;
+}
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    /* 让显示不开的标题用省略号代替 */
+    /* 1，隐藏溢出的部分 */
+    overflow: hidden;
+    /* 2，强制一行显示 */
+    white-space: nowrap;
+    /* 3,文字超出部分，显示省略号 */
+    text-overflow: ellipsis;
+}
+
+.lifeservice {
+    height: 209px;
+    /* background-color: purple; */
+    border: 1px solid #e4e4e4;
+    border-top: none;
+    overflow: hidden;
+    /* border-right: none; */
+}
+/* 在父盒子中排列子盒子，最后一个盒子总是掉下来的解决方案：
+1，加宽父盒子，配合overflow=hidden
+2，给子盒子加margin=-1px 
+3，设置子盒子宽度为父盒子的 1/n，用伪类选择器将每一行最后一个盒子选中并修改边框为0*/
+.lifeservice ul {
+    width: 252px;
+}
+.lifeservice ul li {
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 70px;
+    text-align: center;
+    border-right: #e4e4e4 1px solid;
+    border-bottom: #e4e4e4 1px solid;
+}
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    margin-top: 15px;
+    background-color: pink;
+    /* 精灵图 */
+    background: url("../images/icons.png") no-repeat -19px -15px;
+}
+.lifeservice ul li .tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 20px;
+    color: #fff;
+    font-size: 10px;
+    background-color: green;
+}
+.lifeservice ul li .edge {
+    position: absolute;
+    top: 7px;
+    right: 0;
+    border: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    width: 0;
+    height: 0;
+}
+    
+.bargain {
+    margin-top: 5px;
+}
+
+/* 推荐 */
+.recom {
+    height: 163px;
+    background-color: #ebebeb;
+    margin-top: 12px;
+}
+.recom_hd {
+   width: 205px;
+   height: 163px;
+   text-align: center;
+   line-height: 163px;
+   background-color: #5c5251; 
+}
+.recom_bd ul li {
+    position: relative;
+    float: left;
+}
+/* 把图片尺寸写死，保持尺寸统一 */
+.recom_bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+/* 给前三个盒子加竖线 */
+/* .recom_bd ul li:nth-child(-n+3):after { */
+.recom_bd ul li:not(:last-child):after {
+    /* 用空内容加设置宽度高度做线 */
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+
+/* floor */
+.floor .w {
+    margin-top: 30px;
+}
+.floor .jiadian .box_hd {
+    height: 25px;
+    border-bottom: 2px solid #c81623;
+    line-height: 25px;
+
+}
+.floor .jiadian .box_hd h3 {
+    float: left;
+    font-size: 16px;
+    color: #c81623;
+    font-weight: 400;
+}
+/* 让父盒子tab_list往右浮动，再让子盒子小li往左浮动，这样就可以保持每个小li的罗列顺序不变。
+如果只右浮动小li，小li的顺序会颠倒 */
+.tab_list {
+    float: right;  
+}
+.tab_list ul li {
+    float: left;
+}
+.tab_list ul li:not(:last-child):after {
+    content: "|";
+    margin: 0 5px;
+}
+.box_bd {
+    height: 361px;
+    /* background-color: pink; */
+}
+.tab_list_item {
+    display: grid;
+    grid-template-columns: 210px 329px 221px 221px 219px;
+    grid-template-rows: 361px;
+}
+.tab_list_item div:first-child {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    width: 210px;
+    background-color: #f9f9f9;
+}
+.tab_list_item div:first-child ul {
+    display: grid;
+    grid-template-columns: 30% 30%;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20%;
+    margin-top: 10px;
+    justify-content:center;
+   
+}
+.tab_list_item div:first-child ul li {
+    border-bottom: #ccc 1px solid;
+    text-align: center;
+}
+.tab_content .shuxian {
+    margin-top: 5px;
+    border-right: 1px #ccc solid;
+}
+.bb {
+    /* 一般情况下，a如果包含有宽度的盒子，a需要转为块级元素 */
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 1px #ccc solid;;
+}
