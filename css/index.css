@@ -1,7 +1,6 @@
 .main {
     width: 980px;
     height: 455px;
-    /* background-color: pink; */
     margin-left: 220px;
     margin-top: 10px;
 }
@@ -15,7 +14,6 @@
 .newsflash {
     width: 250px;
     height: 455px;
-    /* background-color: skyblue; */
 }
 
 .focus ul li {
@@ -78,7 +76,6 @@
 }
 .news {
     height: 165px;
-    /* background-color: pink; */
     border: 1px #ccc solid;
 }
 .news-hd {
@@ -232,7 +229,6 @@
 }
 .box_bd {
     height: 361px;
-    /* background-color: pink; */
 }
 .tab_list_item {
     display: grid;

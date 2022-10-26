@@ -32,11 +32,12 @@
 .style_red {
     color: #c81623;
 }
+
 /* 快捷导航模块 */
 .shortcut {
-    /*高度是可以继承的，这里设置高度后，子盒子不需要再设置高度*/
+    /*高度是可以继承的?，这里设置高度后，子盒子不需要再设置高度*/
     height: 31px;
-    /* line-height 也可以继承 */
+    /* line-height 也可以继承? */
     line-height: 31px;
     background-color: #f1f1f1;
 }
@@ -59,26 +60,25 @@
 }
 
 /* 头部 */
-
 .header {
     position: relative;
     height: 105px;
-    /* background-color: pink; */
 }
 .logo {
     position: absolute;
     top: 25px;
     width: 171px;
     height: 61px;
-    /* background-color: skyblue; */
 }
 .logo a {
     display: block;
     width: 171px;
     height: 61px;
     background: url(../images/logo.png) no-repeat;
-    /* font-size: 0;  方法一*/
-    /* 方法二 */
+
+    /* logo图标SEO优化，隐藏logo内嵌文字的方法
+    方法一:font-size: 0; 
+    方法二:text-indent: -9999px; overflow: hidden; */
     text-indent: -9999px;
     overflow: hidden;
 }
@@ -89,7 +89,6 @@
     width: 538px;
     height: 36px;
     border: 2px solid #b1191a;
-    /* background-color: skyblue; */
 }
 .search input {
     width: 454px;
@@ -155,7 +154,6 @@
 /* nav盒子是通栏的，给个高度给个下边框 */
 .nav {
     height: 47px;
-    /* width: 100%; */
     border-bottom: 2px solid #b1191a;
 }
 .nav .dropdown {
@@ -192,7 +190,6 @@
 .dropdown .dd ul li a {
     color: #fff;
     font-size: 14px;
-    /* padding-left: 10px; */
 }
 .dropdown .dd ul li:hover a {
     color: #c81623;
@@ -234,13 +231,11 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    /* gap: 10px; */
 }
 .mod_service ul li {
     width: 300px;
     height: 50px;
     padding-left: 35px;
-    /* background-color: pink; */
 }
 .mod_service ul li h5 {
     width: 50px;

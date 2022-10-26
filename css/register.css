@@ -35,11 +35,10 @@ header {
     margin: 50px auto 0;
 }
 .reg_form ul li label {
+    /* 文字靠右对齐，将label变成一个inline-block，设置宽度后让文字右对齐 */
     display: inline-block;
     width: 88px;
-    /* 文字靠右对齐 */
     text-align: right;
-
 }
 .reg_form ul li {
     margin-bottom: 20px;
@@ -78,12 +77,15 @@ header {
     /* background-color: pink; */
     color: #fff;
 }
+/* 在真实开发中，这里不要这么做。而是应该给每个加class，方便后期js操作 */
 .safe em:first-child {
     background-color: #de1111;
 }
+/* 在真实开发中，这里不要这么做。而是应该给每个加class，方便后期js操作 */
 .safe em:nth-child(2) {
     background-color: #40b83f;
 }
+/* 在真实开发中，这里不要这么做。而是应该给每个加class，方便后期js操作 */
 .safe em:last-child {
     background-color: #f79100;
 }
